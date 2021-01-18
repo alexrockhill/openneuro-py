@@ -105,6 +105,7 @@ async def _download_file(*,
                         verify_hash=verify_hash, verify_size=verify_size,
                         max_retries=max_retries,
                         retry_backoff=retry_backoff, semaphore=semaphore)
+                    return
                 else:
                     raise RuntimeError(f'Timeout when trying to download '
                                         f'{outfile}.')
@@ -134,6 +135,7 @@ async def _download_file(*,
                             verify_hash=verify_hash, verify_size=verify_size,
                             max_retries=max_retries,
                             retry_backoff=retry_backoff, semaphore=semaphore)
+                        return
                     else:
                         raise RuntimeError(f'Timeout when trying to download '
                                             f'{outfile}.')
@@ -200,6 +202,7 @@ async def _download_file(*,
                             verify_hash=verify_hash, verify_size=verify_size,
                             max_retries=max_retries,
                             retry_backoff=retry_backoff, semaphore=semaphore)
+                        return
                     else:
                         raise RuntimeError(
                             f'Error {response.status_code} when trying '
@@ -220,6 +223,7 @@ async def _download_file(*,
                         verify_hash=verify_hash, verify_size=verify_size,
                         max_retries=max_retries,
                         retry_backoff=retry_backoff, semaphore=semaphore)
+                    return
                 else:
                     raise RuntimeError(f'Timeout when trying to download '
                                        f'{outfile}.')
