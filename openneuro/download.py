@@ -379,7 +379,7 @@ def download(*,
     """
 
     msg_problems = 'problems 🤯' if stdout_unicode else 'problems'
-    msg_bugs = 'bugs 🪲 ' if stdout_unicode else 'bugs'
+    msg_bugs = 'bugs 🪲' if stdout_unicode else 'bugs'
     msg = (f'\n👋 Hello! This is openneuro-py {__version__}. Great to see you! 🤗\n\n'
            f'   👉 Please report {msg_problems} and {msg_bugs} at\n'
            f'      https://github.com/hoechenberger/openneuro-py/issues\n')
